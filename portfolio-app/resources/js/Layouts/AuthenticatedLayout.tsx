@@ -28,10 +28,34 @@ export default function Authenticated({
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink
-                                    href={route('dashboard')}
-                                    active={route().current('dashboard')}
+                                    href={route('admin.dashboard')}
+                                    active={route().current('admin.dashboard')}
                                 >
                                     Dashboard
+                                </NavLink>
+                                <NavLink
+                                    href={route('admin.blogs.index')}
+                                    active={route().current('admin.blogs.*')}
+                                >
+                                    Blog Posts
+                                </NavLink>
+                                <NavLink
+                                    href={route('admin.projects.index')}
+                                    active={route().current('admin.projects.*')}
+                                >
+                                    Projects
+                                </NavLink>
+                                <NavLink
+                                    href={route('admin.contacts.index')}
+                                    active={route().current('admin.contacts.*')}
+                                >
+                                    Messages
+                                </NavLink>
+                                <NavLink
+                                    href={route('home')}
+                                    active={false}
+                                >
+                                    View Site
                                 </NavLink>
                             </div>
                         </div>
@@ -132,10 +156,34 @@ export default function Authenticated({
                 >
                     <div className="space-y-1 pb-3 pt-2">
                         <ResponsiveNavLink
-                            href={route('dashboard')}
-                            active={route().current('dashboard')}
+                            href={route('admin.dashboard')}
+                            active={route().current('admin.dashboard')}
                         >
                             Dashboard
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href={route('admin.blogs.index')}
+                            active={route().current('admin.blogs.*')}
+                        >
+                            Blog Posts
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href={route('admin.projects.index')}
+                            active={route().current('admin.projects.*')}
+                        >
+                            Projects
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href={route('admin.contacts.index')}
+                            active={route().current('admin.contacts.*')}
+                        >
+                            Messages
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href={route('home')}
+                            active={false}
+                        >
+                            View Site
                         </ResponsiveNavLink>
                     </div>
 
